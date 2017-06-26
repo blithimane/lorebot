@@ -14,15 +14,6 @@ const MAX_ITEMS = 3;
 const BRIEF_LIMIT = 50;
 const MYSQL_DATETIME_FORMAT = "YYYY-MM-DD HH:mm:ss"; // for use with moment.format(MYSQL_DATETIME_FORMAT)
 
-var pool = mysql.createPool({
-  connectionLimit: 100,
-  host:'localhost',
-  user: config.username,
-  password: config.password,
-  database: config.database,
-  debug: false
-});
-
 var postgres;
 
 /**
