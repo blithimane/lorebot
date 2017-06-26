@@ -2,7 +2,7 @@
 require("babel-polyfill"); //https://babeljs.io/docs/usage/polyfill/
 const Discord = require("discord.js");
 var moment = require('moment');     // npm install moment
-const config = require('./config.json');
+const config = require('./config.js');
 const querystring = require('querystring'); //for parsing commands specified in !query
 const client = new Discord.Client();
 var express = require('express');
