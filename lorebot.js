@@ -8,7 +8,7 @@ const client = new Discord.Client();
 var express = require('express');
 var router = express.Router();
 var path = require('path');
-var mysql = require('mysql');
+var pg = require('pg');
 var isGroupChat = false;
 const MAX_ITEMS = 3;
 const BRIEF_LIMIT = 50;
@@ -22,6 +22,8 @@ var pool = mysql.createPool({
   database: config.database,
   debug: false
 });
+
+var postgres;
 
 /**
 * Function for parsing the lore from a post in Discord chat
@@ -1019,8 +1021,14 @@ function getHelp(pMsg) {
   return;
 }
 
+pg.defaults.ssl = true;
+pg.connect(config.database, function(err, db) {
+  if (err) throw err;
+  postgres = db;
 
-client.login(config.token);
-client.on("ready", () => {
-  console.log("Lorebot ready!");
+  client.login(config.token);
+  client.on("ready", () => {
+    console.log("Lorebot ready!");
+  });
 });
+

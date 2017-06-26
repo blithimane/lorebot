@@ -18,15 +18,15 @@
   },
   "homepage": "https://github.com/longhorn09/lorebot#readme",
   "dependencies": {
-    "discord.js": "^11.1.0",
-    "express": "^4.15.3",
-    "mysql": "^2.13.0",
     "babel-cli": "^6.24.1",
     "babel-core": "^6.25.0",
     "babel-polyfill": "^6.23.0",
     "babel-preset-env": "^1.5.2",
-    "moment": "^2.18.1"
+    "discord.js": "^11.1.0",
+    "express": "^4.15.3",
+    "moment": "^2.18.1",
+    "mysql": "^2.13.0",
+    "pg": "^6.4.0"
   },
-  "devDependencies": {
-  }
+  "devDependencies": {}
 }
