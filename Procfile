@@ -1,1 +1,1 @@
-web: node lorebot.js
+worker: node lorebot.js
