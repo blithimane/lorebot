@@ -15,6 +15,7 @@ const BRIEF_LIMIT = 50;
 const MYSQL_DATETIME_FORMAT = "YYYY-MM-DD HH:mm:ss"; // for use with moment.format(MYSQL_DATETIME_FORMAT)
 
 var postgres;
+var pool = new pg.Pool();
 
 /**
 * Function for parsing the lore from a post in Discord chat
@@ -1013,7 +1014,7 @@ function getHelp(pMsg) {
 }
 
 pg.defaults.ssl = true;
-pg.connect(config.database, function(err, db) {
+pool.connect(config.database, function(err, db) {
   if (err) throw err;
   postgres = db;
 
