@@ -20,13 +20,13 @@
   "dependencies": {
     "discord.js": "^11.1.0",
     "express": "^4.15.3",
-    "mysql": "^2.13.0"
-  },
-  "devDependencies": {
+    "mysql": "^2.13.0",
     "babel-cli": "^6.24.1",
     "babel-core": "^6.25.0",
     "babel-polyfill": "^6.23.0",
     "babel-preset-env": "^1.5.2",
     "moment": "^2.18.1"
+  },
+  "devDependencies": {
   }
 }
