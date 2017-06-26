@@ -16,15 +16,6 @@ const MYSQL_DATETIME_FORMAT = "YYYY-MM-DD HH:mm:ss"; // for use with moment.form
 
 var postgres;
 
-const params = url.parse(process.env.DATABASE_URL);
-const auth = params.auth.split(':');
-
-const config = {
-
-  ssl: true
-};
-
-
 var pool = new pg.Pool({
   database: config.database,
   password: config.password,
